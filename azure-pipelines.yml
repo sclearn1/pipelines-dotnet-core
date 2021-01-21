@@ -1,0 +1,15 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - dev
+    - master
+    
+  paths:
+    include:
+    - Source/API/*
+pool:
+  vmImage: 'windows-2019'
+variables:
+  buildConfiguration: 'Release'
+  apiSolutionPath: 'Source/API/Test.sln'
